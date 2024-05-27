@@ -28,7 +28,7 @@ def main():
             annual_cost = num_people * wage 
             grand_total += annual_cost
             # st.write(f"{category}: {monthly_cost}")
-            data_list.append({"Labour Type":category,"Year":2024,"Annual Wage":round(wage,0),"Number of Units":num_people,"Annual Cost":annual_cost})
+            data_list.append({"Labour Type":category,"Year":2024,"Annual Wage":round(wage,0),"Number of Units":num_people,"Annual Cost":round(annual_cost,0)})
         result_df=pd.DataFrame(data_list)
         st.write(" ")
         st.write(" ")
