@@ -28,7 +28,7 @@ def main():
             annual_cost = num_people * wage 
             grand_total += annual_cost
             # st.write(f"{category}: {monthly_cost}")
-            data_list.append({"Labour Type":category,"Year":2024,"Annual Wage":round(wage,2),"Number of Units":num_people,"Annual Cost":annual_cost})
+            data_list.append({"Labour Type":category,"Year":2024,"Annual Wage":round(wage,0),"Number of Units":num_people,"Annual Cost":annual_cost})
         result_df=pd.DataFrame(data_list)
         st.write(" ")
         st.write(" ")
@@ -37,7 +37,7 @@ def main():
         # st.write("Monthly Cost for Selected Labour Types")
         st.subheader('Monthly Cost for Selected Labour Types', divider='blue')
         st.write(result_df)
-        grand_total=round(grand_total,2)
+        grand_total=round(grand_total,0)
         st.metric(label="Grand Total", value=grand_total)
         # st.write(f"Grand Total: {grand_total}")
 
