@@ -21,9 +21,9 @@ def main():
             num_hours_key=f"{category}_2"
             col1, col2 = st.columns(2)
             with col1:
-                num_people=st.number_input(f"Number of {category} personnel:",min_value=0,step=1,key=num_people_key) 
+                num_people=st.number_input(f"Number of {category} units:",min_value=0,step=1,key=num_people_key) 
             with col2:
-                num_hours=st.number_input(f"Number of {category} personnel:",min_value=0,step=1,key=num_hours_key)
+                num_hours=st.number_input(f"Number of Hours for {category} ",min_value=0,step=1,key=num_hours_key)
             wage_type_df=df[wage_type]
             wage = df[(df['Country'] == selected_country) & (df['Job Title'] == category) ][wage_type].values[0]
             # latest_year=df[(df['Country'] == selected_country) & (df['Labour Type New'] == category)]['Year'].values[0]
